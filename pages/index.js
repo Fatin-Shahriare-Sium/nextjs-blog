@@ -5,6 +5,8 @@ import "react-multi-carousel/lib/styles.css";
 import CarouselComponent from '../components/carousel-component';
 import Post from '../components/post';
 import Profile from '../components/profile';
+import Topic from '../components/topic-setcion';
+
 export async function getStaticProps(){
   let res=await fetch(`http://localhost:5000/post/all`)
   let data=await res.json()
@@ -53,6 +55,7 @@ export default function Home({posts}) {
           </div>
           <div className="home-post__advise">
               <Profile/>
+              <Topic/>
           </div>
       
         </div>
