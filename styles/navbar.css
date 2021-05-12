@@ -1,0 +1,61 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 93%;
+    margin: 0px auto;
+    color: var(--text-color);
+    z-index: 20;
+    position: relative;
+    height: 9vh;
+}
+.navbar-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.navbar-toggle img{
+    height: 2rem;
+    margin: auto;
+}
+.navbar-toggle,.navbar-search{
+    padding: 5px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+.navbar-toggle::before{
+    content:attr(data-toggle);
+    position: absolute;
+    top: 70%;
+    left:100%;
+    background-color: var(--text-color);
+    color: var(--back-color);
+    font-weight: 500;
+    font-size: 1.3rem;
+    width: 0px;
+    padding: 3px;
+    border-radius: 9px;
+    text-align: center;
+    opacity: 0;
+    transition: width .3s ease;
+}
+.navbar-toggle:hover::before{
+    opacity: 1!important;
+    width: max-content;
+}
+.navbar-toggle:hover{
+    background-color: rgba(0, 239, 113,.5);
+    border-radius: 17px;
+}
+
+.navbar-search img{
+    height: 2rem;
+}
+.navbar::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 93%;
+    border-bottom: 2px solid rgb(80, 79, 79);
+    height: 3px;
+}

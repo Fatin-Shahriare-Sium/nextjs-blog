@@ -1,0 +1,8 @@
+.navbar{
+
+}
+.navbarLink{
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+}

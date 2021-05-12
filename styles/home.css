@@ -1,0 +1,24 @@
+.home{
+    min-height: 91vh;
+}
+.home-carousel{
+    height:57vh;
+}
+.home-post-container{
+    min-height: 34vh;
+    display: flex;
+}
+.home-post{
+    flex: .7;
+
+}
+.home-post__advise{
+    flex: .3;
+
+}
+
+@media screen and (max-width:900px) {
+    .home-post-container{
+        flex-direction: column;
+    }
+}

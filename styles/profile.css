@@ -1,0 +1,45 @@
+.profile{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    align-items: center;
+    background-color: rgba(49, 80, 52 ,.3);
+}
+.profile-name{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-top: 5%;
+    color: var(--text-color);
+}
+.profile-socialLinks{
+    display: flex;
+    align-items: center;
+}
+.profile-socialLinks img{
+    width: 32px;
+    height: 33px;
+    margin: 0px 1%;
+    padding: 3px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.profile-socialLinks__fb:hover{
+    background-color: rgba( 22, 87, 248 ,.5);
+    border-radius: 17px;
+}
+.profile-socialLinks__tw:hover{
+    background-color: rgba(  0, 120, 248 ,.5);
+    border-radius: 17px;
+}
+.profile-socialLinks__pin:hover{
+    background-color: rgba(  245, 10, 28,.5);
+    border-radius: 17px;
+}
+.profile-socialLinks__link:hover{
+    background-color: rgba(   10, 88, 245 ,.5);
+    border-radius: 17px;
+}
+.profile-socialLinks__you{
+    margin-top: 7%!important;
+}

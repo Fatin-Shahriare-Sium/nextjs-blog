@@ -1,0 +1,33 @@
+.carousel-component{
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-component__img {
+    height: 40vh;
+    flex: .5;
+    
+    
+
+}
+.carousel-component__img img{
+    width: 100%;
+    height: 40vh;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.carousel-component__details{
+    flex: .5;
+    color: var(--text-color);
+}
+.carousel-component__title{
+    font-size: 4rem;
+    margin: 0;
+    font-weight: bolder;
+}
+.carousel-component__body{
+    font-size: 2rem;
+}

@@ -1,0 +1,14 @@
+.customScroll{
+    width: 100%;
+    height: 5px;
+    background-color: #e4e4e4;
+    position: fixed;
+}
+.wrapper{
+    height:900vh;
+}
+.content{
+    height: 500vh;
+    width: 40vw;
+    background-color: aqua;
+}
