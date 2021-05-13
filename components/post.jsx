@@ -1,7 +1,8 @@
 import React from 'react'
 let cheerio=require('cheerio')
 let moment=require('moment')
-const Post = ({img,alt,title,body,time,topic}) => {
+import Link from 'next/link'
+const Post = ({img,alt,title,body,time,topic,id}) => {
     let truncateText=()=>{
         let text=cheerio.load(body).text()
         if(text.length>190){
@@ -20,10 +21,12 @@ const Post = ({img,alt,title,body,time,topic}) => {
                 <div className='post-details__tags'>
                     <p>{topic}</p>
                 </div>
+                <Link href={`/post/${id}`}>
                 <div className='post-details__cover'>
                 <p className='post-details__title'>{title}</p>
                 <p className='post-details__body'>{truncateText()}</p>
                 </div>
+                </Link>
                 {moment({time}).format('L')}
             </div>
         </div>

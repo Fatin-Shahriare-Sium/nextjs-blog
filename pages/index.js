@@ -6,11 +6,10 @@ import CarouselComponent from '../components/carousel-component';
 import Post from '../components/post';
 import Profile from '../components/profile';
 import Topic from '../components/topic-setcion';
-
-export async function getStaticProps(){
+//https://dev.to/juliannatetreault/json-ld-what-it-is-and-how-dev-uses-it-4d25 [json-ld stack learner using]
+export async function getServerSideProps(){
   let res=await fetch(`http://localhost:5000/post/all`)
   let data=await res.json()
-  console.log(data);
   return{
       props:{
           posts:data.posts
@@ -51,7 +50,7 @@ export default function Home({posts}) {
         </div>
         <div className='home-post-container'>
           <div className='home-post'>
-              {posts.map((sig,index)=><Post key={index} topic={sig.topic} title={sig.title} body={sig.body} img={sig.thumbnail.src} alt={sig.thumbnail.alt} time={sig.createdAt}/>)}
+              {posts.map((sig,index)=><Post key={index} id={sig._id} topic={sig.topic} title={sig.title} body={sig.body} img={sig.thumbnail.src} alt={sig.thumbnail.alt} time={sig.createdAt}/>)}
           </div>
           <div className="home-post__advise">
               <Profile/>

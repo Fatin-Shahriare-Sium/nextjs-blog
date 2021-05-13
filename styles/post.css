@@ -62,6 +62,23 @@
     border: none;
     /* color: var(--text-color); */
 }
+.post-details__cover{
+    transition: all .3s ease;
+}
+.post-details__cover:hover{
+    color: rgba(29, 255, 5, 1);
+    cursor: pointer;
+}
+/* for single post showing */
+.single-post{
+    display: flex;
+}
+.single-post__wrapper{
+    flex: .7;
+}
+.sinle-post__advise{
+    flex: .3;
+}
 @media screen and (max-width:800px){
     .post{
         flex-direction: column;
