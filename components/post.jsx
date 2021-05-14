@@ -21,7 +21,7 @@ const Post = ({img,alt,title,body,time,topic,id}) => {
                 <div className='post-details__tags'>
                     <p>{topic}</p>
                 </div>
-                <Link href={`/post/${id}`}>
+                <Link  href={`/post/${id}`}>
                 <div className='post-details__cover'>
                 <p className='post-details__title'>{title}</p>
                 <p className='post-details__body'>{truncateText()}</p>

@@ -10,6 +10,7 @@
   "dependencies": {
     "bootstrap": "^5.0.0",
     "cheerio": "^1.0.0-rc.9",
+    "disqus-react": "^1.0.11",
     "draft-js": "^0.11.7",
     "moment": "^2.29.1",
     "next": "10.2.0",

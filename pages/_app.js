@@ -6,6 +6,7 @@ import '../styles/home.css'
 import '../styles/post.css'
 import '../styles/section.css'
 import '../styles/profile.css'
+import '../styles/newsletter.css'
 import '../styles/carousel-component.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 function MyApp({ Component, pageProps }) {

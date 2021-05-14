@@ -69,15 +69,119 @@
     color: rgba(29, 255, 5, 1);
     cursor: pointer;
 }
-/* for single post showing */
+/* 
+|||||||||||||||||||||
+for single post showing --start
+|||||||||||||||||||||
+*/
 .single-post{
     display: flex;
+    width: 100%;
 }
 .single-post__wrapper{
     flex: .7;
+    margin-left: 4%;
 }
 .sinle-post__advise{
     flex: .3;
+}
+.single-post__time{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 700;
+    width: 97%;
+    margin: 1% auto;
+    justify-content: space-between;
+}
+.single-post__title p{
+    font-size: 4rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+.single-post__body p{
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.single-post__footer{
+    
+}
+.single-post__footer-btn{
+    padding: 5px;
+    font-size: 1.7rem;
+    border-radius: 7px;
+
+}
+.single-post__footer__share{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+.--facebook{
+    border: 2px solid rgba(7, 161, 245,1);
+    color: rgba(7, 161, 245,1);
+    
+}
+.--facebook:hover{
+    background-color:rgba(7, 161, 245,.9);
+    color: var(--text-color)!important;
+}
+.--twitter{
+    border: 2px solid rgba(50, 165, 247,1);
+    color: rgba(50, 165, 247,1);
+}
+.--twitter:hover{
+    background-color:rgba(50, 165, 247,.9);
+    color: var(--text-color)!important;
+}
+.--pinterest{
+    border: 2px solid rgba(245, 27, 27 ,1);
+    color: rgba(245, 27, 27 ,1);
+}
+.--pinterest:hover{
+    background-color: rgba(245, 27, 27 ,.9);
+    color: var(--text-color)!important;
+}
+.--linkend{
+    border: 2px solid rgba(7, 161, 245,1);
+    color: rgba(7, 161, 245,1);
+}
+.--linkend:hover{
+    background-color:rgba(7, 161, 245,1) ;
+    color: var(--text-color)!important;
+}
+.--qoura{
+    border: 2px solid #b92b27;
+    color: #b92b27;
+}
+.--qoura:hover{
+    background-color:#b92b27 ;
+    color: var(--text-color)!important;
+}
+.single-post__footer__share a{
+    text-decoration: none;
+    color: none;
+}
+/* 
+|||||||||||||||||||||
+for single post showing --end
+|||||||||||||||||||||
+*/
+
+
+/* 
+|||||||||||||||||||||
+for single scrollbar --start
+|||||||||||||||||||||
+*/
+.scrollbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 1vh;
 }
 @media screen and (max-width:800px){
     .post{
@@ -87,6 +191,9 @@
     .post-details__wrapper{
         width: 90%;
     }
-    
+    .single-post{
+        flex-direction: column;
+    }
+        
     
 }
