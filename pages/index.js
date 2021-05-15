@@ -39,6 +39,18 @@ export default function Home({posts}) {
   }
  
   return (
+   <>
+   <Head>
+    <link href="/static/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="/static/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+     <title>Digital Grower - Grow with us</title>
+     <meta content='We are Digital Grower.We are actually an organization.We want to spread knowledge,news,solution on various thing to the people.We are very regular and active.We think by the grace of Allah,we will able to reach new news and updated news very rapidly.
+      Please, stick with us to know the unknown' name='description' />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content='Digital Grower'/>
+    <meta property="og:title" content='Digital Grower - Grow with us'/>
+    <meta property="og:image" content="https://leerob.io/static/images/banner.png"/>
+   </Head>
     <div className='home'>
         <div className='home-carousel'>
         <Carousel 
@@ -59,6 +71,7 @@ export default function Home({posts}) {
       
         </div>
     </div>
+    </>
     
   )
 }

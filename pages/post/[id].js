@@ -34,7 +34,7 @@ const PostShower = ({post}) => {
         setShow(true)
     },[])
     
-    show && document.getElementById('scrollbar') && window.addEventListener('scroll',handleScroll)
+    show && window.addEventListener('scroll',handleScroll)
     
        
     let showScrollBar=()=>{
