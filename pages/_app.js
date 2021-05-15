@@ -9,6 +9,7 @@ import '../styles/profile.css'
 import '../styles/newsletter.css'
 import '../styles/carousel-component.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import '../styles/modal.css'
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>

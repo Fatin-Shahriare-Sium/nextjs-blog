@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.41",
     "bootstrap": "^5.0.0",
     "cheerio": "^1.0.0-rc.9",
     "disqus-react": "^1.0.11",

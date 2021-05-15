@@ -1,0 +1,40 @@
+.modalx{
+    position: fixed;
+    z-index: 10000;
+    background-color: var(--back-color);
+    height: 100vh;
+    width: 100vw;
+    color: var(--text-color);
+}
+.modalx-searchBox{
+    width: 87%;
+    margin: 0px auto;
+}
+.modalx-searchBox form{
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modalx-searchBox form input{
+    background-color: var(--back-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.modalx-searchBox form input[type='text']{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.modalx-searchBox form button{
+    height: 5vh;
+    background-color: var(--back-color);
+    color: var(--text-color);
+    width: calc(100% - 90%);
+    border: none;
+    border: 1px solid var(--text-color);
+}
+.modalx-searchBox input{
+    width: 90%;
+    height: 5vh;
+}

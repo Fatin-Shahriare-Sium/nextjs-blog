@@ -6,6 +6,8 @@ import NewsLetter from "../../components/newsletter"
 import { useEffect, useState } from 'react'
 import {useRouter} from 'next/router'
 import Disqus from '../../components/disqus'
+import useScroll from '../../components/hooks/useScroll'
+import Modal from '../../components/modal'
 
 export async function getServerSideProps({params}){
     let res=await fetch(`http://localhost:5000/post/${params.id}`)
@@ -18,39 +20,30 @@ export async function getServerSideProps({params}){
 }
 const PostShower = ({post}) => {
     let[show,setShow]=useState(false)
+    let {handleScroll}=useScroll()
     let router=useRouter()
-    let get=()=>{
-        let $=cherrio.load(post.body)
-        let img=$('img').toString()
-        console.log(img);
-    }
     useEffect(()=>{
         let root=document.documentElement
         let scrollDiv=document.createElement('div')
         scrollDiv.id='scroll'
-        console.log(router);
-        router.pathname == '/'?'':root.appendChild(scrollDiv)
+        let alreadyHas=document.getElementById('scroll')
+        console.log(alreadyHas);
+        !alreadyHas && root.appendChild(scrollDiv)
         setShow(true)
     },[])
-    show &&  window.addEventListener('scroll',()=>{
-        let scrollTop = window.scrollY;
-        let docHeader=document.getElementById('single-post__header')
-        let docBody=document.getElementById('single-post__body')
-
-        let docHeight=docHeader.offsetHeight + docBody.offsetHeight
-        let winHeight = window.innerHeight;
-        let scrollPercent = scrollTop / (docHeight - winHeight);
-        let scrollPercentRounded = Math.round(scrollPercent * 100);
-        document.getElementById("scrollbar").style.background =`
-        linear-gradient(to right, var(--text-color) ${scrollPercentRounded}%, var(--back-color) ${scrollPercentRounded}%)`
-    })
+   
+    show && document.getElementById('scrollbar') && window.addEventListener('scroll',handleScroll)
+     
+    
+       
     let showScrollBar=()=>{
        return ReactDOM.createPortal(<div id='scrollbar' className='scrollbar'></div>,document.getElementById('scroll'))
     }
     return (
         <div className='single-post'>
+            <Modal/>
             {show && showScrollBar()}
-            <div  className='single-post__wrapper'>
+            <div id='single-post__wrapper'  className='single-post__wrapper'>
                     <div id='single-post__header' className='single-post__header'>
                         <div className='single-post__title'>
                             <p>{post.title}</p>
