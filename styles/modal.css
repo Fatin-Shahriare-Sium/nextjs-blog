@@ -5,6 +5,7 @@
     height: 100vh;
     width: 100vw;
     color: var(--text-color);
+    overflow: auto;
 }
 .modalx-searchBox{
     width: 87%;
@@ -22,19 +23,32 @@
     color: var(--text-color);
     border: 1px solid var(--text-color);
 }
-.modalx-searchBox form input[type='text']{
+.modalx-searchBox input[type='text']{
     font-size: 2rem;
     font-weight: 500;
-}
-.modalx-searchBox form button{
-    height: 5vh;
-    background-color: var(--back-color);
-    color: var(--text-color);
-    width: calc(100% - 90%);
-    border: none;
-    border: 1px solid var(--text-color);
 }
 .modalx-searchBox input{
     width: 90%;
     height: 5vh;
+}
+.modalx-searchBox-keyword{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 1.7% auto;
+    font-size: 2rem;
+    font-weight: 700;
+   
+}
+.modalx-searchedContent{
+    width: 87%;
+    margin: 0px auto;
+    overflow-y: auto;
+}
+.modalx-searchBox-keyword p{
+    cursor: pointer;
+}
+.active-topic{
+    color: rgb(8, 243, 67);
 }

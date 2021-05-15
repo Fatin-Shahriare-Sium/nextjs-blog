@@ -6,7 +6,6 @@ mailchimp.setConfig({
 });
 export default async (req,res)=>{
   let {email}=req.body
-  console.log('email express',email);
   if(!email){
     return res.json({
       msg:'Please,give your email'

@@ -1,6 +1,10 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 let useChangeTheme=()=>{
     let[dark,setDark]=useState(true)
+    let[showModal,setShowModal]=useState(false)
+    useEffect(()=>{
+        localStorage.setItem('modalx',false)
+    },[])
     let changeTheme=()=>{
         let root=document.documentElement
         let preBackColor=root.style.getPropertyValue('--back-color')
@@ -14,6 +18,8 @@ let useChangeTheme=()=>{
         }
         setDark(pre=>!pre)
     }
-    return {dark,changeTheme}
+
+   
+    return {dark,changeTheme,showModal}
 }
 export default useChangeTheme;

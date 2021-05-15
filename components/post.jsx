@@ -4,11 +4,7 @@ let moment=require('moment')
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 const Post = ({img,alt,title,body,time,topic,id}) => {
-    useEffect(()=>{
-        return () => window.removeEventListener('scroll', ()=>{
-            
-        });
-    })
+    
     let truncateText=()=>{
         let text=cheerio.load(body).text()
         if(text.length>190){

@@ -8,10 +8,12 @@ let Disqus = ({post}) => {
     title: post.title // Single post title
   }
     return (
-        <DiscussionEmbed
+        <div style={{marginTop:'3%'}}>
+          <DiscussionEmbed
         shortname={disqusShortname}
         config={disqusConfig}
         />
+        </div>
          
         
     )

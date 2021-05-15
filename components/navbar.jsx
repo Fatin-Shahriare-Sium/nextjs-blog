@@ -5,6 +5,7 @@ import useChangeTheme from "./hooks/useChangeTheme";
 import sun from '../assets/sun.svg'
 import night from '../assets/night.svg'
 import searchW from '../assets/search.svg'
+import Link from  'next/link'
 import searchDark from '../assets/dark-search.svg'
 const NavBar = () => {
     let {dark,changeTheme}=useChangeTheme()
@@ -16,7 +17,9 @@ const NavBar = () => {
             </div>
             <p className='navbar-title'>Digital Grower</p>
             <div className="navbar-search">
+                <Link href='/modal'>
                 <img src={dark?searchW:searchDark} alt="" />
+                </Link>
             </div>
             
         </div>

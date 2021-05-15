@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import {useRouter} from 'next/router'
 import Disqus from '../../components/disqus'
 import useScroll from '../../components/hooks/useScroll'
-import Modal from '../../components/modal'
+
 
 export async function getServerSideProps({params}){
     let res=await fetch(`http://localhost:5000/post/${params.id}`)
@@ -20,6 +20,8 @@ export async function getServerSideProps({params}){
 }
 const PostShower = ({post}) => {
     let[show,setShow]=useState(false)
+
+    
     let {handleScroll}=useScroll()
     let router=useRouter()
     useEffect(()=>{
@@ -31,9 +33,8 @@ const PostShower = ({post}) => {
         !alreadyHas && root.appendChild(scrollDiv)
         setShow(true)
     },[])
-   
+    
     show && document.getElementById('scrollbar') && window.addEventListener('scroll',handleScroll)
-     
     
        
     let showScrollBar=()=>{
@@ -41,8 +42,8 @@ const PostShower = ({post}) => {
     }
     return (
         <div className='single-post'>
-            <Modal/>
             {show && showScrollBar()}
+           
             <div id='single-post__wrapper'  className='single-post__wrapper'>
                     <div id='single-post__header' className='single-post__header'>
                         <div className='single-post__title'>
