@@ -6,6 +6,7 @@ import CarouselComponent from '../components/carousel-component';
 import Post from '../components/post';
 import Profile from '../components/profile';
 import Topic from '../components/topic-setcion';
+import digital from '../assets/digital.png'
 //https://dev.to/juliannatetreault/json-ld-what-it-is-and-how-dev-uses-it-4d25 [json-ld stack learner using]
 export async function getServerSideProps(){
   let res=await fetch(`http://localhost:5000/post/all`)
@@ -49,7 +50,18 @@ export default function Home({posts}) {
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content='Digital Grower'/>
     <meta property="og:title" content='Digital Grower - Grow with us'/>
-    <meta property="og:image" content="https://leerob.io/static/images/banner.png"/>
+    <meta property="og:image" content="https://res.cloudinary.com/sium/image/upload/v1621147035/digital_u6aggr.png"/>
+    <meta property="og:image:alt" content="digitalgrower"/>
+    <meta property="og:description" content="We are Digital Grower.We are actually an organization.We want to spread knowledge,news,solution on various thing to the people.We are very regular and active.We think by the grace of Allah,we will able to reach new news and updated news very rapidly.
+      Please, stick with us to know the unknown"/>
+    <meta property="og:url" content=""/>
+    {/* website url above */}
+    <meta property="twitter:title" content="Digital Grower - Grow with us"/>
+    <meta property="twitter:description" content="We are Digital Grower.We are actually an organization.We want to spread knowledge,news,solution on various thing to the people.We are very regular and active.We think by the grace of Allah,we will able to reach new news and updated news very rapidly.
+      Please, stick with us to know the unknown" />
+    <meta property="twitter:image" content="https://res.cloudinary.com/sium/image/upload/v1621147035/digital_u6aggr.png"/>
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:alt" content="digitalgrower"/>
    </Head>
     <div className='home'>
         <div className='home-carousel'>
@@ -70,6 +82,7 @@ export default function Home({posts}) {
           </div>
       
         </div>
+  
     </div>
     </>
     

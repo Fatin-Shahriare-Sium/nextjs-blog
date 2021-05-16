@@ -17,7 +17,7 @@ const NavBar = () => {
             </div>
             <p className='navbar-title'>Digital Grower</p>
             <div className="navbar-search">
-                <Link href='/modal'>
+                <Link href='/search'>
                 <img src={dark?searchW:searchDark} alt="" />
                 </Link>
             </div>

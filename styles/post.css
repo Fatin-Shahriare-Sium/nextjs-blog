@@ -95,8 +95,8 @@ for single post showing --start
     margin: 1% auto;
     justify-content: space-between;
 }
-.single-post__title p{
-    font-size: 4rem;
+.single-post__title h1{
+    font-size: 4rem!important;
     color: var(--text-color);
     font-weight: 700;
 }

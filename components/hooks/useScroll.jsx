@@ -2,7 +2,6 @@
 let useScroll=()=>{
     function handleScroll(){
         let scrollTop = window.scrollY;
-        console.log('handleScroll');
         let docHeader=document.getElementById('single-post__header')
         let docBody=document.getElementById('single-post__body')
         function docHeightx(){
