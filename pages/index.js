@@ -2,14 +2,17 @@ import Head from 'next/head'
 import Carouselx from '../components/carousel'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Router from 'next/router'
 import CarouselComponent from '../components/carousel-component';
 import Post from '../components/post';
 import Profile from '../components/profile';
 import Topic from '../components/topic-setcion';
 import digital from '../assets/digital.png'
+import { useEffect, useState } from 'react';
 //https://dev.to/juliannatetreault/json-ld-what-it-is-and-how-dev-uses-it-4d25 [json-ld stack learner using]
-export async function getServerSideProps(){
-  let res=await fetch(`http://localhost:5000/post/all`)
+export async function getServerSideProps({query}){
+  
+  let res=await fetch(`http://localhost:5000/post?page=${query.page}&limit=${query.limit}`)
   let data=await res.json()
   return{
       props:{
@@ -17,8 +20,9 @@ export async function getServerSideProps(){
       }
   }
 }
+//https://im.ankitkamboj.in/ porfolio web to follow
 export default function Home({posts}) {
-  
+  let[limit,setLimit]=useState(10)
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -38,7 +42,15 @@ export default function Home({posts}) {
       items: 1
     }
   }
- 
+ useEffect(()=>{
+   window.addEventListener('scroll',()=>{
+     let {clientHeight,scrollHeight,scrollTop}=document.documentElement
+     if(scrollTop + clientHeight >= scrollHeight){
+       setLimit(pre=>pre+5)
+       Router.push(`/?limit=${limit}`)
+     }
+   })
+ },[])
   return (
    <>
    <Head>
