@@ -31,3 +31,14 @@
 .carousel-component__body{
     font-size: 2rem;
 }
+@media screen and (max-width:800px) {
+    .carousel-component{
+        flex-direction: column;
+    }
+    .carousel-component__body{
+        display: none;
+    }
+    .carousel-component__title{
+        font-size: 2.7rem;
+    }
+}

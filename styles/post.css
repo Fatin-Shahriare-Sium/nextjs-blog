@@ -15,12 +15,12 @@
 }
 .post-img__wrapper{
     position: relative;
-
+   
     
 }
 .post-img__wrapper img{
-    width: 90%;
-    height: 203px;
+    width: 90%!important;
+    height: 203px!important;
     object-fit:contain;
     margin-left: 5%;
     
@@ -33,6 +33,8 @@
     transform: translate(-50%,-50%); */
 
 }
+
+
 .post-details__wrapper{
     color: var(--text-color);
 }

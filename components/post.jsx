@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 let cheerio=require('cheerio')
 let moment=require('moment')
-import {useRouter} from 'next/router'
 import Link from 'next/link'
 const Post = ({img,alt,title,body,time,topic,id}) => {
     

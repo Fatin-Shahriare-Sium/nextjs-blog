@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Carouselx from '../components/carousel'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Router from 'next/router'
