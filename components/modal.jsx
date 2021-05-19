@@ -7,8 +7,7 @@ const Modal = () => {
     let handleSearch=(e)=>{
         e.preventDefault()
         setTopic('')
-        console.log(e);
-        fetch(`http://localhost:5000/search/${e.target.value}`,{
+        fetch(`https://next-blogx.herokuapp.com/search/${e.target.value}`,{
             method:'GET'
         }).then(res=>res.json())
         .then(data=>{
@@ -16,7 +15,7 @@ const Modal = () => {
         })
     }
     useEffect(()=>{
-        fetch(`http://localhost:5000/search/topic/${topic}`,{
+        fetch(`https://next-blogx.herokuapp.com/search/topic/${topic}`,{
             method:'GET'
         }).then(res=>res.json())
         .then(data=>{
@@ -25,10 +24,8 @@ const Modal = () => {
     },[topic])
     return (
        <div id='modalx' className='modalx'>
-           <div className="modalx-title">
-               <p>Search</p>
-           </div>
-           <div className="modalx-searchBox">
+        
+           <div className="modalx-searchBox mt-5">
                
                     <input onChange={(event)=>handleSearch(event)}  type="text" placeholder='Search' />
                 

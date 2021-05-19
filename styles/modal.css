@@ -36,7 +36,7 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 1.7% auto;
+    margin: 1.7%;
     font-size: 2rem;
     font-weight: 700;
    
@@ -51,4 +51,9 @@
 }
 .active-topic{
     color: rgb(8, 243, 67);
+}
+@media screen and (max-width:800px) {
+    .modalx-searchBox-keyword{
+        display: none;
+    }
 }

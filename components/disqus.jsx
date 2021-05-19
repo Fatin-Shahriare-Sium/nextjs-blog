@@ -3,7 +3,7 @@ import {DiscussionEmbed} from "disqus-react"
 let Disqus = ({post}) => {
     const disqusShortname = "digitalgrowerx"  
     const disqusConfig = {
-    url: `http://localhost:3000/post/${post._id}`,
+    url: `https://next-blogx.herokuapp.com/post/${post._id}`,
     identifier: post._id, // Single post id
     title: post.title // Single post title
   }

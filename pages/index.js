@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 //https://dev.to/juliannatetreault/json-ld-what-it-is-and-how-dev-uses-it-4d25 [json-ld stack learner using]
 export async function getServerSideProps({query}){
   
-  let res=await fetch(`http://localhost:5000/post?page=${query.page}&limit=${query.limit}`)
+  let res=await fetch(`https://next-blogx.herokuapp.com/post?page=${query.page}&limit=${query.limit}`)
   let data=await res.json()
   return{
       props:{

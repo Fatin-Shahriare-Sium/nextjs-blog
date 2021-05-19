@@ -4,10 +4,7 @@ const Topic = () => {
     
     let[topics,setTopics]=useState('')
     useEffect(()=>{
-        // let fetcher=(url)=>fetch(url).then(res=>res.json())
-        // let data=fetcher('http://localhost:5000/topic')
-        // let {data,error}=useSWR('http://localhost:5000/topic',fetcher)
-        fetch('http://localhost:5000/topic')
+        fetch('https://next-blogx.herokuapp.com/topic')
         .then(res=>res.json())
         .then(data=>setTopics(data.topic))
         
