@@ -11,7 +11,7 @@ import Head from 'next/head'
 
 
 export async function getServerSideProps({params}){
-    let res=await fetch(`http://localhost:5000/post/${params.id}`)
+    let res=await fetch(`https://next-blogx.herokuapp.com/post/${params.id}`)
     let data=await res.json()
     return {
        props:{
